@@ -14,7 +14,8 @@ int main() {
     printf("Process Id\tMemory Usage (KB)\tProcess Name\n");
 
     for (int i = 0; i < numRunning; i++) {
-        // Get a handle to the process
+        //getting a handle to the process
+        //ForTheOpenProcess interact-->(1)
         HANDLE processHandle = OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, FALSE, processes[i]);
         if (processHandle == NULL) {
             continue;
