@@ -1,0 +1,2 @@
+//Process that has a working set size greater than 50 MB (>50)
+//Adjust it in your own way
