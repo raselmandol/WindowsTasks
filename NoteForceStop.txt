@@ -1,0 +1,5 @@
+//it is not recommended to use this ForceStop Program without having a proper knowledge about Memory and Tasks.
+//Cause if you stop all the program -->uses a certain level of memory
+//it can force stop necessary Applications.
+//Even the anti-malware executables
+//so be careful
