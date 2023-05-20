@@ -1,0 +1,2 @@
+//It's kind of doing the bad things with bad things
+//I am doing all these to make you understand about the interaction with Windows
