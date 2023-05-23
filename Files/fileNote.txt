@@ -1,0 +1,2 @@
+//Note that managing filles and file related operations with c is a complex matter
+// Only when you work with Windows
