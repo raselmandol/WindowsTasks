@@ -18,7 +18,7 @@ int main() {
         if (GetUserNameA(username, &size)) {
             std::cout << "current User: " << username << std::endl;
         } else {
-            std::cerr << "dailed to get the current user's name. Error code: " << GetLastError() << std::endl;
+            std::cerr << "failed to get the current user's name. Error code: " << GetLastError() << std::endl;
         }
 
         CloseHandle(hToken);
