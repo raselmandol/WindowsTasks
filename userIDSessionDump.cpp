@@ -5,6 +5,7 @@ int main() {
     //the process token
     HANDLE hToken;
     if (OpenProcessToken(GetCurrentProcess(), TOKEN_QUERY, &hToken)) {
+        //session token 
         TOKEN_SESSION_INFORMATION sessionInfo;
         DWORD size;
         if (GetTokenInformation(hToken, TokenSessionId, &sessionInfo, sizeof(sessionInfo), &size)) {
