@@ -1,3 +1,4 @@
+//simple to use, simple to get
 #include <iostream>
 #include <Windows.h>
 
