@@ -5,7 +5,9 @@
 #pragma comment(lib, "Wtsapi32.lib")
 
 int main() {
+    //getting session id
     DWORD sessionId = WTSGetActiveConsoleSessionId();
+    //getting username
     WCHAR* username = nullptr;
     DWORD size;
     if (WTSQuerySessionInformationW(WTS_CURRENT_SERVER_HANDLE, sessionId, WTSUserName, &username, &size)) {
