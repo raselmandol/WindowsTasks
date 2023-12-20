@@ -61,6 +61,7 @@ int main() {
         return 1;
     }
 
+    //adding 
     hr = firewallRules->Add(blockRule);
     if (FAILED(hr)) {
         printf("Could not add rule to Windows Firewall.\n");
