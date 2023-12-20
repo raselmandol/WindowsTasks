@@ -13,6 +13,7 @@ int main() {
     }
 
     //creating an instance of the Windows Firewall API
+    //instance 
     INetFwPolicy2* firewallPolicy;
     hr = CoCreateInstance(__uuidof(NetFwPolicy2), NULL, CLSCTX_INPROC_SERVER, __uuidof(INetFwPolicy2), (void**)&firewallPolicy);
     if (FAILED(hr)) {
