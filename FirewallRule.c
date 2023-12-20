@@ -22,6 +22,7 @@ int main() {
         return 1;
     }
 
+    //FwProfile
     INetFwProfile* currentProfile;
     hr = firewallPolicy->get_CurrentProfile(&currentProfile);
     if (FAILED(hr)) {
