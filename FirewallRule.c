@@ -7,6 +7,7 @@ int main() {
   
   //COM library initializing
     hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
+    //if Failed-->
     if (FAILED(hr)) {
         printf("Could not initialize COM library.\n");
         return 1;
