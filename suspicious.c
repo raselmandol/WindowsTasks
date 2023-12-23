@@ -3,7 +3,7 @@
 #include <psapi.h>
 
 int main() {
-  
+    //process snapshot
     HANDLE processSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
     if (processSnapshot == INVALID_HANDLE_VALUE) {
         printf("Could not create process snapshot.\n");
