@@ -29,7 +29,7 @@ int main() {
                 continue;
             }
 
-
+            //print sus details:-->while processHandle
             if (pmc.WorkingSetSize > 50000000 && pmc.WorkingSetSize / pmc.PagefileUsage < 2 && pmc.PagefileUsage / pmc.PagefileUsagePeak < 2) {
                 printf("%-8lu%-32s%lu\n", processEntry.th32ProcessID, processEntry.szExeFile, pmc.WorkingSetSize);
             }
