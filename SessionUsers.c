@@ -5,6 +5,7 @@
 #pragma comment(lib, "Wtsapi32.lib")
 
 int main() {
+    //getting session info
     PWTS_SESSION_INFO sessionInfo;
     DWORD sessionCount;
     if (WTSEnumerateSessions(WTS_CURRENT_SERVER_HANDLE, 0, 1, &sessionInfo, &sessionCount)) {
