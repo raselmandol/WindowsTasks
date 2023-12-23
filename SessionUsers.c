@@ -11,6 +11,7 @@ int main() {
     if (WTSEnumerateSessions(WTS_CURRENT_SERVER_HANDLE, 0, 1, &sessionInfo, &sessionCount)) {
         for (DWORD i = 0; i < sessionCount; i++) {
             if (sessionInfo[i].State == WTSActive) {
+                //printing the details:
                 printf("User %d is logged on\n", sessionInfo[i].SessionId);
                 printf("    Station name: %S\n", sessionInfo[i].pWinStationName);
                 printf("    Session name: %S\n", sessionInfo[i].pSessionName);
