@@ -15,6 +15,7 @@ int main() {
     processEntry.dwSize = sizeof(processEntry);
     if (Process32First(processSnapshot, &processEntry)) {
         do {
+            //processHandle-->open process
             HANDLE processHandle = OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, FALSE, processEntry.th32ProcessID);
             if (processHandle == NULL) {
                 continue;
