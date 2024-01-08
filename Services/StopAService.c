@@ -18,6 +18,7 @@ int main()
         return 1;
     }
 
+    //service status
     SERVICE_STATUS serviceStatus;
     if (ControlService(hService, SERVICE_CONTROL_STOP, &serviceStatus))
     {
