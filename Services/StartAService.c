@@ -10,6 +10,7 @@ int main()
         return 1;
     }
 
+    //openService
     SC_HANDLE hService = OpenService(hSCManager, "MyServiceName", SERVICE_START);
     if (hService == NULL)
     {
