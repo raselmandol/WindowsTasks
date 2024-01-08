@@ -10,6 +10,7 @@ int main()
         return 1;
     }
 
+    //set buffer size
     DWORD bufferSize = 0;
     DWORD servicesReturned = 0;
     DWORD resumeHandle = 0;
