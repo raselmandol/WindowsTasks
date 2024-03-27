@@ -54,7 +54,8 @@ int main() {
             continue;
         }
 
-        
+
+      //max size_, iter
         char statusText[32];
         switch (status.dwCurrentState) {
             case SERVICE_RUNNING:
