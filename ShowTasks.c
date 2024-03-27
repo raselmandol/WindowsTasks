@@ -32,6 +32,7 @@ int main() {
             continue;
         }
         DWORD memoryUsageKB = pmc.PrivateUsage / 1024;
+        //print process_details
 
         printf("%u\t\t%u\t\t%s\n", processes[i], memoryUsageKB, processName);
 
