@@ -37,6 +37,7 @@ int main() {
 
     
     printf("Service Name\t\tService Display Name\n");
+    //iter_over_services
     for (DWORD i = 0; i < numServices; i++) {
         printf("%-32s%s\n", services[i].lpServiceName, services[i].lpDisplayName);
     }
