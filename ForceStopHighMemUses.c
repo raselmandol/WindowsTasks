@@ -54,7 +54,7 @@ int main() {
                 if (TerminateProcess(processHandle, 0)) {
                     printf("    Terminated\n");
                 } else {
-                    printf("    Could not terminate process (error code: %lu)\n", GetLastError());
+                    printf("Could not terminate process (error code: %lu)\n", GetLastError());
                 }
             }
 
