@@ -62,7 +62,7 @@ int main() {
                 if (Process32First(processTreeSnapshot, &processTreeEntry)) {
                     do {
                         if (processTreeEntry.th32ParentProcessID == processEntry.th32ProcessID) {
-                            printf("    %-8lu%-32s\n", processTreeEntry.th32ProcessID, processTreeEntry.szExeFile);
+                            printf("  %-8lu%-32s\n", processTreeEntry.th32ProcessID, processTreeEntry.szExeFile);
                         }
                     } while (Process32Next(processTreeSnapshot, &processTreeEntry));
                 }
