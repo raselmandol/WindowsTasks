@@ -13,7 +13,7 @@ void PrintRegistryKeys(HKEY hKey, const char* subKey)
         while (RegEnumKeyExA(hSubKey, index, keyName, &keyNameSize, NULL, NULL, NULL, NULL) == ERROR_SUCCESS)
         {
             printf("%s\\%s\n", subKey, keyName);
-            index++;
+            index++; //increment, insert
             keyNameSize = sizeof(keyName);
         }
 
@@ -23,8 +23,9 @@ void PrintRegistryKeys(HKEY hKey, const char* subKey)
 
 int main()
 {
+    //key_path here
     HKEY hRootKey = HKEY_CURRENT_USER;
-    const char* subKey = "SOFTWARE";
+    const char* subKey = "SOFTWARE"; //adjust 
     PrintRegistryKeys(hRootKey, subKey);
     return 0;
 }
