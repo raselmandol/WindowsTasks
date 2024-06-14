@@ -62,7 +62,7 @@ int main()
 {
     //Registry hive and subkey here
     HKEY hRootKey = HKEY_CURRENT_USER;
-    const char* subKey = "SOFTWARE";
+    const char* subKey = "SOFTWARE"; //adjust the path, vector or list accordingly
     PrintRegistryKeysAndValues(hRootKey, subKey);
     return 0;
 }
