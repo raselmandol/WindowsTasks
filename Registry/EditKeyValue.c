@@ -3,6 +3,8 @@
 
 void EditRegistryValue(HKEY hKey, const char* subKey, const char* valueName, const char* newValue)
 {
+
+        //open the registry subkey with write access
     HKEY hSubKey;
     if (RegOpenKeyExA(hKey, subKey, 0, KEY_SET_VALUE, &hSubKey) == ERROR_SUCCESS)
     {
