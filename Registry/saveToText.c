@@ -42,7 +42,7 @@ void SaveRegistryToTextFile(HKEY hKey, const char *subKey, const char *fileName)
             char valueName[1024];
             DWORD valueNameSize = sizeof(valueName);
             DWORD valueType;
-            BYTE valueData[4096]; //
+            BYTE valueData[4096]; //adjust size
             DWORD valueDataSize = sizeof(valueData);
             
             while (RegEnumValueA(hOpenedKey, index, valueName, &valueNameSize, NULL, &valueType, valueData, &valueDataSize) == ERROR_SUCCESS) {
