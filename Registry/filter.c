@@ -4,9 +4,10 @@
 void filterRegistry(const char* keyPath, const char* filter) {
     HKEY hKey;
     LONG openResult = RegOpenKeyExA(HKEY_CURRENT_USER, keyPath, 0, KEY_READ, &hKey);
-    
+
+    //handle the ball? error
     if (openResult != ERROR_SUCCESS) {
-        printf("Error opening registry key. Error code: %ld\n", openResult);
+        printf("error  opening registry key. Error code: %ld\n", openResult);
         return;
     }
 
@@ -19,6 +20,7 @@ void filterRegistry(const char* keyPath, const char* filter) {
         RegCloseKey(hKey);
         return;
     }
+    //be rich 
 
     char* valueName = (char*)malloc(maxValueNameSize);
     DWORD valueNameSize = maxValueNameSize;
@@ -40,7 +42,7 @@ void filterRegistry(const char* keyPath, const char* filter) {
             break;
         }
 
-        // Example filter: check if the value name matches the filter string
+        //filter values
         if (strstr(valueName, filter) != NULL) {
             printf("Name: %s, Type: %ld\n", valueName, valueType);
 
@@ -56,10 +58,12 @@ void filterRegistry(const char* keyPath, const char* filter) {
 }
 
 int main() {
+    //change to '?'
     const char* keyPath = "Software\\Microsoft\\Windows\\CurrentVersion\\Run";
-    const char* filter = "example";
+    const char* filter = "example"; //uhh
 
-    printf("Filtering registry entries with '%s' in path: %s\n", filter, keyPath);
+    //filtering ? 
+    printf(" registry entries with '%s' in path: %s\n", filter, keyPath);
     filterRegistry(keyPath, filter);
 
     return 0;
